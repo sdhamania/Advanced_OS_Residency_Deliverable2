@@ -1,0 +1,269 @@
+{
+  "units": "simulated CPU units",
+  "timer_ms_per_unit": 10,
+  "note": "Logical metrics exclude host timer/output overhead; wall_ms is separately measured.",
+  "workload": [
+    {
+      "id": "A",
+      "burst": 6,
+      "priority": 3,
+      "arrival": 0
+    },
+    {
+      "id": "B",
+      "burst": 2,
+      "priority": 1,
+      "arrival": 2
+    },
+    {
+      "id": "C",
+      "burst": 1,
+      "priority": 1,
+      "arrival": 2
+    },
+    {
+      "id": "D",
+      "burst": 1,
+      "priority": 3,
+      "arrival": 3
+    }
+  ],
+  "cases": {
+    "rr_q1": {
+      "command": "sched run rr 1 10",
+      "tick_ms": 10,
+      "metrics": [
+        {
+          "id": "A",
+          "arrival": 0,
+          "burst": 6,
+          "priority": 3,
+          "first_start": 0,
+          "completion": 10,
+          "waiting": 4,
+          "turnaround": 10,
+          "response": 0
+        },
+        {
+          "id": "B",
+          "arrival": 2,
+          "burst": 2,
+          "priority": 1,
+          "first_start": 2,
+          "completion": 7,
+          "waiting": 3,
+          "turnaround": 5,
+          "response": 0
+        },
+        {
+          "id": "C",
+          "arrival": 2,
+          "burst": 1,
+          "priority": 1,
+          "first_start": 3,
+          "completion": 4,
+          "waiting": 1,
+          "turnaround": 2,
+          "response": 1
+        },
+        {
+          "id": "D",
+          "arrival": 3,
+          "burst": 1,
+          "priority": 3,
+          "first_start": 5,
+          "completion": 6,
+          "waiting": 2,
+          "turnaround": 3,
+          "response": 2
+        }
+      ],
+      "average": {
+        "waiting": 2.5,
+        "turnaround": 5.0,
+        "response": 0.75
+      },
+      "finish": 10,
+      "dispatches": 10,
+      "preemptions": 0,
+      "wall_ms": 123.257
+    },
+    "rr_q2": {
+      "command": "sched run rr 2 10",
+      "tick_ms": 10,
+      "metrics": [
+        {
+          "id": "A",
+          "arrival": 0,
+          "burst": 6,
+          "priority": 3,
+          "first_start": 0,
+          "completion": 10,
+          "waiting": 4,
+          "turnaround": 10,
+          "response": 0
+        },
+        {
+          "id": "B",
+          "arrival": 2,
+          "burst": 2,
+          "priority": 1,
+          "first_start": 2,
+          "completion": 4,
+          "waiting": 0,
+          "turnaround": 2,
+          "response": 0
+        },
+        {
+          "id": "C",
+          "arrival": 2,
+          "burst": 1,
+          "priority": 1,
+          "first_start": 4,
+          "completion": 5,
+          "waiting": 2,
+          "turnaround": 3,
+          "response": 2
+        },
+        {
+          "id": "D",
+          "arrival": 3,
+          "burst": 1,
+          "priority": 3,
+          "first_start": 7,
+          "completion": 8,
+          "waiting": 4,
+          "turnaround": 5,
+          "response": 4
+        }
+      ],
+      "average": {
+        "waiting": 2.5,
+        "turnaround": 5.0,
+        "response": 1.5
+      },
+      "finish": 10,
+      "dispatches": 6,
+      "preemptions": 0,
+      "wall_ms": 124.873
+    },
+    "rr_q4": {
+      "command": "sched run rr 4 10",
+      "tick_ms": 10,
+      "metrics": [
+        {
+          "id": "A",
+          "arrival": 0,
+          "burst": 6,
+          "priority": 3,
+          "first_start": 0,
+          "completion": 10,
+          "waiting": 4,
+          "turnaround": 10,
+          "response": 0
+        },
+        {
+          "id": "B",
+          "arrival": 2,
+          "burst": 2,
+          "priority": 1,
+          "first_start": 4,
+          "completion": 6,
+          "waiting": 2,
+          "turnaround": 4,
+          "response": 2
+        },
+        {
+          "id": "C",
+          "arrival": 2,
+          "burst": 1,
+          "priority": 1,
+          "first_start": 6,
+          "completion": 7,
+          "waiting": 4,
+          "turnaround": 5,
+          "response": 4
+        },
+        {
+          "id": "D",
+          "arrival": 3,
+          "burst": 1,
+          "priority": 3,
+          "first_start": 7,
+          "completion": 8,
+          "waiting": 4,
+          "turnaround": 5,
+          "response": 4
+        }
+      ],
+      "average": {
+        "waiting": 3.5,
+        "turnaround": 6.0,
+        "response": 2.5
+      },
+      "finish": 10,
+      "dispatches": 5,
+      "preemptions": 0,
+      "wall_ms": 117.002
+    },
+    "priority": {
+      "command": "sched run priority 10",
+      "tick_ms": 10,
+      "metrics": [
+        {
+          "id": "A",
+          "arrival": 0,
+          "burst": 6,
+          "priority": 3,
+          "first_start": 0,
+          "completion": 9,
+          "waiting": 3,
+          "turnaround": 9,
+          "response": 0
+        },
+        {
+          "id": "B",
+          "arrival": 2,
+          "burst": 2,
+          "priority": 1,
+          "first_start": 2,
+          "completion": 4,
+          "waiting": 0,
+          "turnaround": 2,
+          "response": 0
+        },
+        {
+          "id": "C",
+          "arrival": 2,
+          "burst": 1,
+          "priority": 1,
+          "first_start": 4,
+          "completion": 5,
+          "waiting": 2,
+          "turnaround": 3,
+          "response": 2
+        },
+        {
+          "id": "D",
+          "arrival": 3,
+          "burst": 1,
+          "priority": 3,
+          "first_start": 9,
+          "completion": 10,
+          "waiting": 6,
+          "turnaround": 7,
+          "response": 6
+        }
+      ],
+      "average": {
+        "waiting": 2.75,
+        "turnaround": 5.25,
+        "response": 2.0
+      },
+      "finish": 10,
+      "dispatches": 5,
+      "preemptions": 1,
+      "wall_ms": 117.777
+    }
+  }
+}

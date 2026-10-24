@@ -1,0 +1,27 @@
+Added A burst=6 priority=3 arrival=0
+Added B burst=2 priority=1 arrival=2
+Added C burst=1 priority=1 arrival=2
+Added D burst=1 priority=3 arrival=3
+ALGORITHM RR quantum=4 tick_ms=10
+t=0 ARRIVE A priority=3
+t=0 DISPATCH A remaining=6
+t=2 ARRIVE B priority=1
+t=2 ARRIVE C priority=1
+t=3 ARRIVE D priority=3
+t=4 QUANTUM_EXPIRED A
+t=4 DISPATCH B remaining=2
+t=6 COMPLETE B
+t=6 DISPATCH C remaining=1
+t=7 COMPLETE C
+t=7 DISPATCH D remaining=1
+t=8 COMPLETE D
+t=8 DISPATCH A remaining=2
+t=10 COMPLETE A
+METRICS (simulated units)
+ID ARRIVAL BURST PRIORITY FIRST COMPLETION WAIT TURNAROUND RESPONSE
+A 0 6 3 0 10 4 10 0
+B 2 2 1 4 6 2 4 2
+C 2 1 1 6 7 4 5 4
+D 3 1 3 7 8 4 5 4
+AVERAGE wait=3.500 turnaround=6.000 response=2.500
+SUMMARY finish=10 dispatches=5 preemptions=0 wall_ms=117.002

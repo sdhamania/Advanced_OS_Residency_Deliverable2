@@ -1,0 +1,34 @@
+ACTUAL TERMINAL SCREENSHOTS
+
+Use a real Terminal window, compile with make, and run ./build/os-shell.
+These instructions are not screenshots. The evidence text files are records
+of real automated execution, not screenshots either.
+
+Capture 1: Round-Robin quantum and switching
+Run these lines individually:
+  clear
+  sched reset
+  sched add A 6 3 0
+  sched add B 2 1 2
+  sched add C 1 1 2
+  sched add D 1 3 3
+  sched run rr 2 10
+Use a tall window (at least 45 lines) so the run header, switching, and metric
+rows are visible. Save as 01_round_robin.png.
+
+Capture 2: Priority arrival, preemption, and FCFS tie
+With the same workload, run:
+  clear
+  sched list
+  sched run priority 10
+The trace must show ARRIVE B/C at t=2, PREEMPT A by=B, B preceding C, and A
+resuming before D. Save as 02_priority_preemption.png.
+
+Capture 3: Configurable quantum and performance comparison
+Run the same workload with sched run rr 1 0 and sched run rr 4 0. Capture the
+results/AVERAGE rows for both (scroll or use separate captures). Save as
+03_rr_quantum1_metrics.png and 04_rr_quantum4_metrics.png. Together with the
+previous two captures, they demonstrate waiting, turnaround, and response.
+
+Use Shift-Command-4 on macOS to capture the Terminal region. Preserve the
+original PNGs and include only captions that accurately describe the output.

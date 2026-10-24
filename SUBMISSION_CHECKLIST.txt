@@ -1,0 +1,27 @@
+DELIVERABLE 2 LOCAL HANDOFF
+
+Project folder: /Users/shobhitdhamania/Desktop/Assignments/Advanced_OS_Residency_Deliverable2
+Report: /Users/shobhitdhamania/Desktop/Assignments/Advanced_OS_Residency_Deliverable2/report/Advanced_Shell_Deliverable_2_Report.docx
+Capture guide: /Users/shobhitdhamania/Desktop/Assignments/Advanced_OS_Residency_Deliverable2/screenshots/CAPTURE_INSTRUCTIONS.txt
+GitHub (empty): https://github.com/sdhamania/Advanced_OS_Residency_Deliverable2
+
+Build/run from this folder:
+make
+make test
+./build/os-shell
+
+BEFORE SUBMISSION
+1. Completed: four genuine Terminal screenshots saved under screenshots/.
+2. Completed: screenshots inserted, captions distinguish timed/fast modes,
+   report layout reviewed, and ZIP refreshed.
+3. Review the cover date, course metadata, analysis, and reflections.
+4. Code remains uncommitted and unpushed. When ready, you can run:
+   git add .
+   git commit -m "Add Deliverable 2 shell implementation and report"
+   git push -u origin main
+5. Upload the report and complete source ZIP to the course portal, then
+   include the repository link if requested.
+
+The ZIP contains source, Makefile, tests, README, examples, raw measured
+evidence, four actual Terminal screenshots, and the updated report. It excludes build binaries, Git metadata, and internal
+rendering files. No source code has been published to GitHub.

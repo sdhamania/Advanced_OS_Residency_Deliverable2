@@ -1,0 +1,6 @@
+sched add A 6 3 0
+sched add B 2 1 2
+sched add C 1 1 2
+sched add D 1 3 3
+sched run priority 10
+exit 0

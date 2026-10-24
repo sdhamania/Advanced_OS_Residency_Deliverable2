@@ -1,0 +1,39 @@
+DELIVERABLE 2 FINAL VERIFICATION RECORD
+October 24, 2026
+Executed platform: macOS 15.7.8, Apple Silicon
+
+CURRENT STATUS
+Source, tests, report, and all four required native Terminal screenshots are
+complete. The APA 7 report contains 14 pages, three data tables, and four
+original screenshot images in Appendix B. Images are embedded unchanged.
+The final ZIP matches the current intended project files exactly.
+
+TESTING
+Strict C++17 make test passed: parser assertions, scheduler unit assertions,
+20 inherited shell integration tests, and four scheduling integration tests.
+The scheduling tests include 80 comparisons with an independent unit-step
+model. The source ZIP also built and passed tests after clean extraction.
+Scheduler unit assertions passed AddressSanitizer/UndefinedBehaviorSanitizer;
+Clang scheduler static analysis reported no findings.
+
+INDEPENDENT REVIEW
+A separate reference model matched 1200 varied scheduling cases, including
+first-start, completion, waiting, turnaround and response. Maximum legal
+timing/priority values passed. A PTY check observed priority preemption at
+the modeled arrival before the lower-priority burst could finish.
+No actionable functional defect was found.
+
+NATIVE SCREENSHOT EVIDENCE
+Four original author-supplied PNGs show RR q2, priority preemption/FCFS,
+RR q1, and RR q4. Logical metrics agree with the recorded automated results.
+RR q2 and the final priority run use 10 ms/unit. The priority screenshot
+also retains an earlier 1 ms/unit run and input correction. RR q1/q4 use
+fast mode (tick_ms=0); their wall times are not comparable with timed runs.
+Report captions state these distinctions.
+
+REPORT AND PACKAGE QA
+All rendered pages were visually checked; accessibility audit: zero findings.
+No build binaries, Git metadata, or internal rendering files are packaged.
+No commits or pushes have been performed; the remote repository is empty.
+Review personal metadata/reflections, then upload the report and source ZIP.
+The capture guide remains available for reproducing these demonstrations.
